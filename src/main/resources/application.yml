@@ -26,7 +26,7 @@ spring:
           twitch:
             token-uri: https://id.twitch.tv/oauth2/token # 向这个地址要
   datasource:
-    url: jdbc:mysql://${DATABASE_URL:localhost}:${DATABASE_PORT:3306}/twitch?createDatabaseIfNotExist=true
+    url: jdbc:mysql://${DATABASE_URL:localhost}:${DATABASE_PORT:3308}/twitch?createDatabaseIfNotExist=true
     # 连接数据库的url：域名、端口号、数据库名字（twitch，在docker文件里取的）、查询参数（如果没有twitch，会自己创建）等等
     username: ${DATABASE_USERNAME:root} # DATABASE_USERNAME，预先定义的环境变量，到时候在AWS上可以重新定义，从而取代现在的root（默认值）
     password: ${DATABASE_PASSWORD:secret} # 和上面同理
